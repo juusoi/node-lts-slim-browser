@@ -26,4 +26,5 @@ RUN ~/.local/bin/rfbrowser init
 ENV NODE_PATH=/usr/lib/node_modules
 ENV PATH="/home/node/.local/bin:${PATH}"
 
-CMD [ "/bin/sh" ]
+COPY entrypoint.sh .
+ENTRYPOINT [ "/robot/entrypoint.sh" ]
